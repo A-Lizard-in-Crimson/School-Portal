@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Evalyn's StudyBuddy Portal&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.loading-spinner {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 4px solid #f3f3f3;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 4px solid #3498db;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>height: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>animation: spin 2s linear infinite;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes spin {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>0% { transform: rotate(0deg); }</p>
+<p class="p1"><span class="Apple-converted-space">      </span>100% { transform: rotate(360deg); }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hidden {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="bg-gray-50 p-8 font-sans"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1 class="text-2xl font-bold text-purple-700 mb-6"&gt;Evalyn's StudyBuddy Portal&lt;/h1&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;form id="evalynForm" class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="block text-sm font-semibold" for="dailySummary"&gt;Daily Summary:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="dailySummary" class="w-full p-2 border rounded" placeholder="Summarize your day..." aria-label="Daily Summary" required minlength="5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="block text-sm font-semibold" for="completedAssignments"&gt;Completed Assignments:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="completedAssignments" class="w-full p-2 border rounded" placeholder="List assignments completed..." aria-label="Completed Assignments" required minlength="5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="block text-sm font-semibold" for="moodCheckin"&gt;Mood Check-in:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="moodCheckin" class="w-full p-2 border rounded" placeholder="How are you feeling today?" aria-label="Mood Check-in" required minlength="5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label class="block text-sm font-semibold" for="notesFromEvalyn"&gt;Notes from Evalyn:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="notesFromEvalyn" class="w-full p-2 border rounded" placeholder="Any additional notes?" aria-label="Notes from Evalyn"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button type="submit" class="w-full bg-purple-600 text-white p-2 rounded hover:bg-purple-700 flex items-center justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span id="submitText"&gt;Submit Updates&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="loadingSpinner" class="loading-spinner hidden ml-2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="formFeedback" class="text-red-500 text-sm mt-2" aria-live="polite"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;hr class="my-6"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 class="text-xl font-bold text-green-600 mb-4"&gt;🌟 StudyBuddy Chat 🌟&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="chatBox" class="bg-gray-100 rounded-lg p-4 h-48 overflow-auto" aria-live="polite"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mb-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="text-sm font-medium text-gray-800"&gt;StudyBuddy:&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="bg-blue-100 rounded p-2 text-sm"&gt;Hi Evalyn! Ready to have a great study session?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="mt-4 flex"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="chatInput" class="flex-grow p-2 border rounded-l" placeholder="Type your message..." aria-label="Chat Input" required minlength="1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="chatSend" class="bg-indigo-600 text-white p-2 rounded-r hover:bg-indigo-700 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span id="sendText"&gt;Send&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div id="chatLoadingSpinner" class="loading-spinner hidden ml-2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="chatFeedback" class="text-red-500 text-sm mt-2" aria-live="polite"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Form Submission to Google Sheets</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('evalynForm').addEventListener('submit', function(event) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>event.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const formFeedback = document.getElementById('formFeedback');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const loadingSpinner = document.getElementById('loadingSpinner');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const submitText = document.getElementById('submitText');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>formFeedback.textContent = '';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>loadingSpinner.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>submitText.textContent = 'Submitting...';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>const formData = new URLSearchParams();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>formData.append('dailySummary', document.getElementById('dailySummary').value);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>formData.append('completedAssignments', document.getElementById('completedAssignments').value);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>formData.append('moodCheckin', document.getElementById('moodCheckin').value);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>formData.append('notesFromEvalyn', document.getElementById('notesFromEvalyn').value);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>fetch('YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL', { // Replace with your script URL!</p>
+<p class="p1"><span class="Apple-converted-space">        </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">        </span>headers: { 'Content-Type': 'application/x-www-form-urlencoded' },</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body: formData</p>
+<p class="p1"><span class="Apple-converted-space">      </span>})</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.then(response =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!response.ok) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>throw new Error('Network response was not ok');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>formFeedback.textContent = "Evalyn's updates successfully submitted! 🎉";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('evalynForm').reset();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>})</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.catch((error) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>console.error('Error submitting form:', error);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>formFeedback.textContent = 'An error occurred while submitting the form. Please try again.';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>})</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.finally(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>loadingSpinner.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>submitText.textContent = 'Submit Updates';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Chat Submission to Google Sheets</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('chatSend').addEventListener('click', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const chatInput = document.getElementById('chatInput').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const chatFeedback = document.getElementById('chatFeedback');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const chatLoadingSpinner = document.getElementById('chatLoadingSpinner');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const sendText = document.getElementById('sendText');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>chatFeedback.textContent = '';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (chatInput !== "") {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const chatBox = document.getElementById('chatBox');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const evalynMsgDiv = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>evalynMsgDiv.className = 'bg-indigo-100 rounded p-2 text-sm mb-2';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>evalynMsgDiv.textContent = chatInput;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>chatBox.appendChild(evalynMsgDiv);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>chatBox.scrollTop = chatBox.scrollHeight;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>chatLoadingSpinner.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>sendText.textContent = 'Sending...';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>fetch('YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL', { // Replace with your script URL!</p>
+<p class="p1"><span class="Apple-converted-space">          </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">          </span>headers: { 'Content-Type': 'application/x-www-form-urlencoded' },</p>
+<p class="p1"><span class="Apple-converted-space">          </span>body: new URLSearchParams({ chatMessage: chatInput })</p>
+<p class="p1"><span class="Apple-converted-space">        </span>})</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.then(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>chatFeedback.textContent = 'Message sent successfully!';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>})</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.catch((error) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>console.error('Error submitting chat message:', error);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>chatFeedback.textContent = 'Failed to send chat message.';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>})</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.finally(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>chatLoadingSpinner.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">          </span>sendText.textContent = 'Send';</p>
+<p class="p1"><span class="Apple-converted-space">          </span>document.getElementById('chatInput').value = "";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
